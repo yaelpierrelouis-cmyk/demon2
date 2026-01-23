@@ -118,14 +118,20 @@ section {
 }
 
 /* Grid Layout */
-.card-container {
+
+.characters {
+    padding: 60px 20px;
+    background: #0b0b0b;
+}
+
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: auto;
+    justify-items: center;
 }
 
+/* FLIP CARD */
 .flip-card {
     width: 280px;
     height: 360px;
@@ -135,25 +141,20 @@ section {
 .flip-card-inner {
     width: 100%;
     height: 100%;
-    position: relative;
     transition: transform 0.8s ease;
     transform-style: preserve-3d;
 }
 
-/* Flip on hover */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Front & Back */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     backface-visibility: hidden;
     border-radius: 15px;
-    overflow: hidden;
 }
 
 /* FRONT */
@@ -167,24 +168,16 @@ section {
     object-fit: cover;
 }
 
-.flip-card-front h3 {
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
-
 /* BACK */
 .flip-card-back {
-    background: linear-gradient(145deg, #111, #1a1a1a);
+    background: #1a1a1a;
     color: white;
     transform: rotateY(180deg);
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    text-align: center;
 }
-
 
 /* === GALLERY === */
 .gallery-grid {
