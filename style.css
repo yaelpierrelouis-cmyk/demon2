@@ -76,14 +76,6 @@ nav a:hover {
     transform: translateY(-50%);
 }
 
-.hero {
-    height: 90vh;
-    background: linear-gradient(to right, #000, #300000);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .hero-text {
     text-align: center;
 }
