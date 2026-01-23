@@ -120,3 +120,17 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function createEmbers(section) {
+    for (let i = 0; i < 30; i++) {
+        const ember = document.createElement("span");
+        ember.style.left = Math.random() * 100 + "%";
+        ember.style.animationDuration = (3 + Math.random() * 4) + "s";
+        ember.style.animationDelay = Math.random() * 5 + "s";
+        section.appendChild(ember);
+    }
+}
+
+document.querySelectorAll(".embers").forEach(section => {
+    createEmbers(section);
+});
