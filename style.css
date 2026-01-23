@@ -95,11 +95,14 @@ section {
     text-align: center;
 }
 
-.cards .card-container {
+.card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-}
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+ }
 
 /* ===== CHARACTER SECTIONS ===== */
 .cards {
@@ -128,26 +131,28 @@ section {
     height: 360px;
     perspective: 1200px;
     position: relative;
+    display: block;
 }
 
 .flip-card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s ease;
+    position: relative;
     transform-style: preserve-3d;
-    transform-origin: center center;
+    transition: transform 0.8s ease;
+    transform-origin: 50% 50%;
 }
 
+/* FLIP */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
+/* FRONT & BACK */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     backface-visibility: hidden;
     border-radius: 15px;
     overflow: hidden;
@@ -166,7 +171,7 @@ section {
 
 .flip-card-front h3 {
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     color: white;
 }
 
@@ -178,9 +183,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
+
 
 /* === GALLERY === */
 .gallery-grid {
