@@ -126,12 +126,16 @@ section {
     margin: auto;
 }
 
+.flip-card-wrapper {
+    perspective: 1200px;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+}
+
 .flip-card {
     width: 100%;
     height: 360px;
-    perspective: 1200px;
-    position: relative;
-    display: block;
 }
 
 .flip-card-inner {
@@ -140,11 +144,10 @@ section {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s ease;
-    transform-origin: 50% 50%;
 }
 
 /* FLIP */
-.flip-card:hover .flip-card-inner {
+.flip-card-wrapper:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -171,7 +174,7 @@ section {
 
 .flip-card-front h3 {
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     color: white;
 }
 
@@ -183,8 +186,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 
