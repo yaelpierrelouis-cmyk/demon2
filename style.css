@@ -105,26 +105,18 @@ section {
  }
 
 /* ===== CHARACTER SECTIONS ===== */
-.cards {
-    padding: 70px 20px;
-    background-color: #0e0e0e;
+.characters {
+    padding: 80px 20px;
+    background: #0b0b0b; /* dark background for anime feel */
+}
+
+/* Section heading */
+.characters h2 {
     text-align: center;
-}
-
-.cards h2 {
-    color: crimson;
-    font-size: 2.4rem;
     margin-bottom: 40px;
-}
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: #0d0d0d;
     color: white;
-    scroll-behavior: smooth;
+    font-size: 2.5rem;
 }
-
 /* Grid Layout */
 .card-container {
     display: grid;
