@@ -73,7 +73,7 @@ const characterInfo = {
     },
     akaza: {
         name: "Akaza",
-        image: "images/akaza.png",
+        image: "images/akaza.jpg",
         description: "Upper Moon Three, martial arts expert demon who values strength above all. Immense regenerative and combat skills make him deadly."
     },
     hantengu: {
