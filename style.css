@@ -456,11 +456,11 @@ body.light-mode .flip-card-back, body.light-mode .card:hover, body.light-mode .g
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: moveLeft 30s linear infinite;
+    animation: moveLeft 20s linear infinite;
 }
 
 .row-right {
-    animation: moveRight 30s linear infinite;
+    animation: moveRight 20s linear infinite;
 }
 
 .gallery-img {
