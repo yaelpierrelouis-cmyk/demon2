@@ -28,19 +28,19 @@ header {
     font-weight: bold;
 }
 
-nav .nav-links {
+#nav-menu {
     display: flex;
     align-items: center;
 }
 
-nav a {
+#nav-menu a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
     transition: 0.3s;
 }
 
-nav a:hover {
+#nav-menu a:hover {
     color: crimson;
 }
 
