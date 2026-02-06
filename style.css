@@ -58,23 +58,23 @@ header {
     }
 
     #nav-menu {
-        display: none; /* hide by default */
+        max-height: 0;              /* hide menu initially */
+        overflow: hidden;           /* hide extra content */
         flex-direction: column;
         width: 100%;
-        background: black;
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 10px 0;
+        background: black;
+        transition: max-height 0.4s ease; 
     }
 
     #nav-menu.show {
-        display: flex; /* show menu when toggled */
+        max-height: 500px;          
     }
 
     #nav-menu a {
         padding: 10px 20px;
-        margin: 0;
         border-top: 1px solid #333;
     }
 }
