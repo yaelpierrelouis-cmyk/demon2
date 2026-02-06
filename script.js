@@ -284,3 +284,22 @@ function createEmbers(section) {
 document.querySelectorAll(".embers").forEach(section => {
     createEmbers(section);
 });
+
+// Gallery lightbox
+const galleryImages = document.querySelectorAll(".gallery-img");
+const modal = document.getElementById("galleryModal");
+const modalImg = document.getElementById("modalImage");
+const caption = document.getElementById("caption");
+
+galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        caption.innerText = img.alt;
+    });
+});
+
+function closeGalleryModal() {
+    modal.style.display = "none";
+}
+
