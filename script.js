@@ -106,48 +106,135 @@ function openModal(character) {
   const text = document.getElementById("modalText");
   const modal = document.getElementById("characterModal");
 
-  if (character === "tanjiro") {
-    title.innerText = "Tanjiro Kamado";
-    text.innerText = `Tanjiro Kamado is the main protagonist of Demon Slayer. He was once a kind and hardworking boy who lived peacefully with his family in the mountains. His life changed forever when his entire family was slaughtered by demons, leaving only his sister Nezuko alive—but transformed into a demon.
+  switch(character) {
+    // === Main Characters ===
+    case "tanjiro":
+      title.innerText = "Tanjiro Kamado";
+      text.innerText = `Tanjiro Kamado is the main protagonist of Demon Slayer. He was once a kind and hardworking boy who lived peacefully with his family in the mountains. His life changed forever when his entire family was slaughtered by demons, leaving only his sister Nezuko alive—but transformed into a demon.
 
 Instead of giving in to hatred, Tanjiro chose compassion. He joined the Demon Slayer Corps to protect innocent people and search for a cure for Nezuko. Tanjiro possesses an exceptional sense of smell, allowing him to detect emotions and weaknesses in battle.
 
 He initially masters Water Breathing and later awakens the powerful Sun Breathing, a legendary technique passed down through his family. Despite facing overwhelming enemies, Tanjiro never loses his empathy, even for demons.
 
 His strength comes not only from his sword, but from his unwavering kindness, determination, and love for his sister.`;
-  }
+      break;
 
-  else if (character === "nezuko") {
-    title.innerText = "Nezuko Kamado";
-    text.innerText = `Nezuko Kamado is Tanjiro’s younger sister and one of the most unique demons in the series. After being turned into a demon during the massacre of her family, she miraculously retained her human emotions and conscience.
+    case "nezuko":
+      title.innerText = "Nezuko Kamado";
+      text.innerText = `Nezuko Kamado is Tanjiro’s younger sister and one of the most unique demons in the series. After being turned into a demon during the massacre of her family, she miraculously retained her human emotions and conscience.
 
 Unlike other demons, Nezuko refuses to eat humans and instead protects them, especially her brother. She often suppresses her demonic urges through sheer willpower.
 
 Nezuko’s Blood Demon Art allows her to manipulate pink flames that harm demons but do not injure humans. She also possesses incredible strength, regeneration, and the ability to shrink or grow her body.
 
 Her character represents the struggle between humanity and darkness, proving that love and family can overcome even the strongest curses.`;
-  }
+      break;
 
-  else if (character === "zenitsu") {
-    title.innerText = "Zenitsu Agatsuma";
-    text.innerText = `Zenitsu Agatsuma is a fearful and insecure Demon Slayer who constantly doubts his abilities. Despite his cowardly nature, Zenitsu possesses extraordinary talent in swordsmanship.
+    case "zenitsu":
+      title.innerText = "Zenitsu Agatsuma";
+      text.innerText = `Zenitsu Agatsuma is a fearful and insecure Demon Slayer who constantly doubts his abilities. Despite his cowardly nature, Zenitsu possesses extraordinary talent in swordsmanship.
 
 He practices Thunder Breathing but is only able to master its first form. However, he executes it to perfection, moving at blinding speed and delivering devastating attacks.
 
 When Zenitsu falls unconscious due to fear, his true potential emerges. In this state, he becomes calm, focused, and incredibly powerful, defeating enemies he could not face while awake.
 
 Zenitsu’s journey highlights personal growth, showing that bravery does not mean being fearless, but pushing forward even when afraid.`;
-  }
+      break;
 
-  else if (character === "inosuke") {
-    title.innerText = "Inosuke Hashibira";
-    text.innerText = `Inosuke Hashibira was raised by wild boars in the mountains, which shaped his aggressive and fearless personality. He wears a boar’s head mask and charges into battle without hesitation.
+    case "inosuke":
+      title.innerText = "Inosuke Hashibira";
+      text.innerText = `Inosuke Hashibira was raised by wild boars in the mountains, which shaped his aggressive and fearless personality. He wears a boar’s head mask and charges into battle without hesitation.
 
 Inosuke developed his own unique combat style known as Beast Breathing. He wields dual serrated swords and relies on his heightened senses and flexibility to overwhelm his enemies.
 
 Though he appears reckless and rude, Inosuke deeply cares about his companions. Over time, he learns the value of teamwork and trust.
 
 His character represents raw instinct, independence, and the strength that comes from accepting others while staying true to oneself.`;
+      break;
+
+    // === Hashira ===
+    case "rengoku":
+      title.innerText = "Kyojuro Rengoku – Flame Hashira";
+      text.innerText = `Kyojuro Rengoku is the Flame Hashira of the Demon Slayer Corps. He is passionate, cheerful, and deeply committed to protecting humanity from demons. Rengoku’s courage and unwavering sense of justice make him a beacon of hope.
+
+He is a master of Flame Breathing, using powerful fire-based techniques to defeat demons. Rengoku’s dedication to his comrades and his willingness to sacrifice himself exemplify the ideals of a true Hashira.`;
+      break;
+
+    case "giyu":
+      title.innerText = "Giyu Tomioka – Water Hashira";
+      text.innerText = `Giyu Tomioka is the Water Hashira, known for his calm, stoic demeanor and incredible swordsmanship. Despite his reserved personality, he cares deeply for humanity and his fellow demon slayers.
+
+Giyu is the one who first recognizes Tanjiro’s potential and guides him into the Demon Slayer Corps. He masters Water Breathing techniques and demonstrates precision, discipline, and determination in every battle.`;
+      break;
+
+    case "shinobu":
+      title.innerText = "Shinobu Kocho – Insect Hashira";
+      text.innerText = `Shinobu Kocho is the Insect Hashira, who hides her sorrow and pain behind a gentle, smiling facade. She cannot physically overpower most demons, so she uses her intelligence, speed, and wisteria-based poisons to defeat them.
+
+Her mastery of Insect Breathing allows her to deliver deadly strikes with finesse. Shinobu’s character emphasizes strategy, intellect, and resilience in the fight against demons.`;
+      break;
+
+    case "tengen":
+      title.innerText = "Tengen Uzui – Sound Hashira";
+      text.innerText = `Tengen Uzui is the flamboyant and powerful Sound Hashira. Combining flashy combat techniques with incredible agility, he defeats demons with precision and style.
+
+Tengen is loyal to his comrades and values teamwork and family above all. His Sound Breathing techniques allow him to deliver explosive attacks and keep his enemies off balance.`;
+      break;
+
+    case "muichiro":
+      title.innerText = "Muichiro Tokito – Mist Hashira";
+      text.innerText = `Muichiro Tokito is the young prodigy Mist Hashira. Calm and often detached, he has immense skill with Mist Breathing techniques that confuse and overwhelm enemies.
+
+Despite his young age, Muichiro demonstrates extraordinary power, showing that natural talent combined with focus can rival even the most experienced warriors.`;
+      break;
+
+    // === Upper Moons ===
+    case "kokushibo":
+      title.innerText = "Kokushibo – Upper Moon One";
+      text.innerText = `Kokushibo is the strongest demon under Muzan Kibutsuji and the Upper Moon One. He has mastered Moon Breathing techniques and possesses centuries of combat experience.
+
+His formidable strength, agility, and regenerative abilities make him an almost invincible foe. Kokushibo’s character represents the pinnacle of demonic power and the tragic consequences of immortality.`;
+      break;
+
+    case "doma":
+      title.innerText = "Doma – Upper Moon Two";
+      text.innerText = `Doma is the Upper Moon Two demon, charismatic yet terrifying. He uses Cryokinetic powers to manipulate ice and freeze his enemies, while also exploiting the emotions of his victims to control them.
+
+His calm demeanor hides the cruelty and danger he poses, making him a highly unpredictable adversary.`;
+      break;
+
+    case "akaza":
+      title.innerText = "Akaza – Upper Moon Three";
+      text.innerText = `Akaza is a martial arts expert and Upper Moon Three demon. He values strength above all and engages in close-combat battles with unmatched skill.
+
+Akaza has immense regenerative powers and physical abilities, making him a deadly opponent for any Demon Slayer.`;
+      break;
+
+    case "hantengu":
+      title.innerText = "Hantengu – Upper Moon Four";
+      text.innerText = `Hantengu is the Upper Moon Four demon, who can split into multiple clones to confuse and overwhelm his enemies. Each clone has its own personality and fighting style.
+
+His deceptive abilities make him a challenging foe, requiring strategy and teamwork to defeat.`;
+      break;
+
+    case "gyokko":
+      title.innerText = "Gyokko – Upper Moon Five";
+      text.innerText = `Gyokko is the artistic Upper Moon Five demon. He treats combat as art and uses pottery-themed Blood Demon Arts to create weapons and monsters that attack his opponents.
+
+Gyokko’s creativity and unique fighting style make him a dangerous and unpredictable enemy.`;
+      break;
+
+    case "kaigaku":
+      title.innerText = "Kaigaku – Upper Moon Six";
+      text.innerText = `Kaigaku is the former Thunder Breathing student who became the Upper Moon Six demon. He is extremely fast and deadly in combat, using lightning-quick strikes and martial prowess.
+
+Kaigaku represents the fall from humanity and the destructive nature of obsession with strength.`;
+      break;
+
+    default:
+      title.innerText = "Unknown Character";
+      text.innerText = "Information for this character is not available.";
+      break;
   }
 
   modal.style.display = "block";
@@ -156,6 +243,14 @@ His character represents raw instinct, independence, and the strength that comes
 function closeModal() {
   document.getElementById("characterModal").style.display = "none";
 }
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+  const modal = document.getElementById("characterModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
 // ================== CLOSE MODAL ==================
 spanClose.onclick = function() {
