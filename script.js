@@ -1,3 +1,11 @@
+
+function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    // toggle a class to show/hide menu
+    navMenu.classList.toggle("show");
+}
+
+
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }

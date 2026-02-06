@@ -50,6 +50,32 @@ nav a:hover {
     cursor: pointer;
 }
 
+
+#nav-menu {
+    display: flex; 
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none; /* hide on mobile by default */
+        flex-direction: column;
+        background: black;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    #nav-menu.show {
+        display: flex; /* show when toggled */
+    }
+
+    #nav-menu a {
+        margin: 10px 0;
+    }
+}
+
 /* === HERO === */
 .hero {
     position: relative;
