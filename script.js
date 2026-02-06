@@ -101,13 +101,60 @@ const modalDescription = document.getElementById('modalDescription');
 const spanClose = document.querySelector('.close');
 
 // ================== OPEN MODAL FUNCTION ==================
-function openModal(characterKey) {
-    if(characterInfo[characterKey]){
-        modal.style.display = "block";
-        modalImage.src = characterInfo[characterKey].image;
-        modalName.innerText = characterInfo[characterKey].name;
-        modalDescription.innerText = characterInfo[characterKey].description;
-    }
+function openModal(character) {
+  const title = document.getElementById("modalTitle");
+  const text = document.getElementById("modalText");
+  const modal = document.getElementById("characterModal");
+
+  if (character === "tanjiro") {
+    title.innerText = "Tanjiro Kamado";
+    text.innerText = `Tanjiro Kamado is the main protagonist of Demon Slayer. He was once a kind and hardworking boy who lived peacefully with his family in the mountains. His life changed forever when his entire family was slaughtered by demons, leaving only his sister Nezuko alive—but transformed into a demon.
+
+Instead of giving in to hatred, Tanjiro chose compassion. He joined the Demon Slayer Corps to protect innocent people and search for a cure for Nezuko. Tanjiro possesses an exceptional sense of smell, allowing him to detect emotions and weaknesses in battle.
+
+He initially masters Water Breathing and later awakens the powerful Sun Breathing, a legendary technique passed down through his family. Despite facing overwhelming enemies, Tanjiro never loses his empathy, even for demons.
+
+His strength comes not only from his sword, but from his unwavering kindness, determination, and love for his sister.`;
+  }
+
+  else if (character === "nezuko") {
+    title.innerText = "Nezuko Kamado";
+    text.innerText = `Nezuko Kamado is Tanjiro’s younger sister and one of the most unique demons in the series. After being turned into a demon during the massacre of her family, she miraculously retained her human emotions and conscience.
+
+Unlike other demons, Nezuko refuses to eat humans and instead protects them, especially her brother. She often suppresses her demonic urges through sheer willpower.
+
+Nezuko’s Blood Demon Art allows her to manipulate pink flames that harm demons but do not injure humans. She also possesses incredible strength, regeneration, and the ability to shrink or grow her body.
+
+Her character represents the struggle between humanity and darkness, proving that love and family can overcome even the strongest curses.`;
+  }
+
+  else if (character === "zenitsu") {
+    title.innerText = "Zenitsu Agatsuma";
+    text.innerText = `Zenitsu Agatsuma is a fearful and insecure Demon Slayer who constantly doubts his abilities. Despite his cowardly nature, Zenitsu possesses extraordinary talent in swordsmanship.
+
+He practices Thunder Breathing but is only able to master its first form. However, he executes it to perfection, moving at blinding speed and delivering devastating attacks.
+
+When Zenitsu falls unconscious due to fear, his true potential emerges. In this state, he becomes calm, focused, and incredibly powerful, defeating enemies he could not face while awake.
+
+Zenitsu’s journey highlights personal growth, showing that bravery does not mean being fearless, but pushing forward even when afraid.`;
+  }
+
+  else if (character === "inosuke") {
+    title.innerText = "Inosuke Hashibira";
+    text.innerText = `Inosuke Hashibira was raised by wild boars in the mountains, which shaped his aggressive and fearless personality. He wears a boar’s head mask and charges into battle without hesitation.
+
+Inosuke developed his own unique combat style known as Beast Breathing. He wields dual serrated swords and relies on his heightened senses and flexibility to overwhelm his enemies.
+
+Though he appears reckless and rude, Inosuke deeply cares about his companions. Over time, he learns the value of teamwork and trust.
+
+His character represents raw instinct, independence, and the strength that comes from accepting others while staying true to oneself.`;
+  }
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("characterModal").style.display = "none";
 }
 
 // ================== CLOSE MODAL ==================
